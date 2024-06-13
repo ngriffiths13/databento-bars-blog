@@ -1,0 +1,30 @@
+[project]
+name = "databento-bars-blog"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Nelson Griffiths", email = "nelsongriffiths@doubleriver.com" },
+]
+dependencies = [
+    "databento>=0.36.0",
+    "polars>=0.20.31",
+    "marimo>=0.6.19",
+    "polars-finance @ git+https://github.com/ngriffiths13/polars-finance",
+    "great-tables>=0.7.0",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/databento_bars_blog"]
